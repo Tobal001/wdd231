@@ -1,0 +1,29 @@
+{
+    "Family name" : "Henriquez",
+    "Move in date" : "11-18-24",
+    "Number of records" : 4,
+    "Visited by bishopric?" : true,
+    "Individual members" : [
+      {
+        "name" : "Cristobal",
+        "Gender" : "male",
+        "Birthdate" : "08-29-92"
+      },
+      {
+        "name" : "Miriam",
+        "Gender" : "female",
+        "Birthdate" : "08-15-98"
+      },
+      {
+        "name" : "Eva",
+        "Gender" : "female",
+        "Birthdate" : "06-15-21"
+      },
+      {
+        "name" : "Ezra",
+        "Gender" : "male",
+        "Birthdate" : "09-12-22"
+      }
+    ]
+  }
+  
