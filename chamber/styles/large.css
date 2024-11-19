@@ -1,4 +1,4 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 48rem) {
     #myButton {
         display: none;
     }
@@ -15,4 +15,36 @@
     nav {
         grid-template-rows: 1fr;
     }
+
+
+    #hero h2{
+    
+        font-size: 5rem;
+    }
+         
+}
+
+@media only screen and (min-width: 64rem) {
+    #hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 2rem; /* Space between columns */
+        align-items: center; /* Center items vertically */
+    }
+
+    h1 {
+        text-align: left; /* Align text to the left for larger screens */
+    }
+
+    .hero-right-content {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 1rem; /* Space between the image and button */
+    }
+
+    .intro-card-container{
+        flex-direction: row;
+        justify-content: space-around;
+    }   
 }
