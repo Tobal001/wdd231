@@ -65,7 +65,7 @@ document.getElementById('list').addEventListener('click', () => {
 
     const cards = container.querySelectorAll('.business-card');
     cards.forEach(card => {
-        card.classList.add('list-item'); /
+        card.classList.add('list-item');
         card.style.padding = ''; 
     });
 });

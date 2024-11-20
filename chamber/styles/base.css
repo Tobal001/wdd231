@@ -2,7 +2,7 @@
     /* Color Palette */
     --color-bg: #ebe9e1;
     --color-bg2: #ffffff;
-    --color-primary: #1690d6;
+    --color-primary: #0a4364;
     --color-secondary: #efb11d;
     --color-triary: #d6536d;
     --color-border: #eeeeee;
@@ -132,7 +132,7 @@ h2  {
 #hero h2{
     font-size: 4rem;
     margin-bottom: 2rem;
-    color: #1690d6;
+    color: var(--color-primary);
 }
 
 #keynote-ticket {
@@ -300,7 +300,6 @@ footer {
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--color-bg);
     padding: 6px 10px;
     border-radius: 5px;
     opacity: 0;
