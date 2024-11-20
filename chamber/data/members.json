@@ -3,8 +3,8 @@
       "name": "Urban Brew Cafe",
       "address": "123 Main Street, Rivertown, ON, A1B 2C3",
       "phone_number": "(555) 123-4567",
-      "website_url": "https://www.urbanbrewcafe.com",
-      "image_icon": "urban_brew_icon.png",
+      "website_url": "http://www.urbanbrewcafe.com",
+      "image_icon": "images/cafe-logo.webp",
       "membership_level": 2
     },
     {
@@ -12,7 +12,7 @@
       "address": "456 Wellness Ave, Rivertown, ON, A1B 2C4",
       "phone_number": "(555) 234-5678",
       "website_url": "https://www.fitzonegym.com",
-      "image_icon": "fitzone_icon.png",
+      "image_icon": "images/gym-zone-logo.webp",
       "membership_level": 3
     },
     {
@@ -20,7 +20,7 @@
       "address": "789 Innovation Blvd, Rivertown, ON, A1B 2C5",
       "phone_number": "(555) 345-6789",
       "website_url": "https://www.techhiveworkspace.com",
-      "image_icon": "techhive_icon.png",
+      "image_icon": "images/techhive-logo.webp",
       "membership_level": 2
     },
     {
@@ -28,7 +28,7 @@
       "address": "101 Eco Lane, Rivertown, ON, A1B 2C6",
       "phone_number": "(555) 456-7890",
       "website_url": "https://www.greenplanetlandscaping.com",
-      "image_icon": "green_planet_icon.png",
+      "image_icon": "images/green-planet-logo.webp",
       "membership_level": 1
     },
     {
@@ -36,7 +36,7 @@
       "address": "202 Education Drive, Rivertown, ON, A1B 2C7",
       "phone_number": "(555) 567-8901",
       "website_url": "https://www.smartstarttutoring.com",
-      "image_icon": "smartstart_icon.png",
+      "image_icon": "images/smart-start-logo.webp",
       "membership_level": 1
     },
     {
@@ -44,7 +44,7 @@
       "address": "303 Creative Way, Rivertown, ON, A1B 2C8",
       "phone_number": "(555) 678-9012",
       "website_url": "https://www.craftyfoxarts.com",
-      "image_icon": "crafty_fox_icon.png",
+      "image_icon": "images/crafty-fox-logo.webp",
       "membership_level": 2
     },
     {
@@ -52,7 +52,7 @@
       "address": "404 Foodie St, Rivertown, ON, A1B 2C9",
       "phone_number": "(555) 789-0123",
       "website_url": "https://www.tasteofasiarivertown.com",
-      "image_icon": "taste_of_asia_icon.png",
+      "image_icon": "images/taste-asia-logo.webp",
       "membership_level": 3
     }
 ]

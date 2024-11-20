@@ -26,7 +26,7 @@
 <body>
     <header>
         <img class="logo" src="images/timbucktwo-logo.svg" width="125px" height="auto" alt="" srcset="">
-        <span>Timbucktwo</span>
+        <span>Chamber of Commerce</span>
         <button id="myButton"></button>
     </header>
     <nav id="animateme">
@@ -40,7 +40,7 @@
     <main>
         <section id="hero">
             <div id="hero-content">
-                <h2>All good things are done with trust.</h2>
+                <h2>Trust Local. Thrive Local.</h2>
                 <div id="hero-right-content">
                     <picture>
                         <source srcset="images/trust-large.webp" media="(min-width: 64rem)">
@@ -110,7 +110,17 @@
                 </div>
             </div>
         </section>
-        <section>
+        <h2> Business Directory</h2>
+        <section class="business-directory">
+            <div class="list-grid-btn">
+                <button  id="list">
+                    <img src="images/list-icon.webp" alt="list icon">
+        
+                </button>
+                <button  id="grid">
+                    <img src="images/grid-icon.webp" alt="grid icon">
+                </button>
+            </div>
             <div id="business-cards">
 
             </div>
@@ -118,8 +128,32 @@
        
     </main>
     <footer>
-        <p id="year"></p>
-        <p id="lastModifiedDate"></p>
+        <div>
+            <strong>Timbucktwo Chamber of Commerce</strong>
+            <p>1251 Main Street</p>
+            <p>Rivertown, Alberta Canada</p>
+            <p>info@tmbktu.org</p>
+            <p>(546) 778-6000</p>
+        </div>
+        <div class="footer-socials">
+            <ul>
+                <li class="socials-content">
+                    <a class="link" data-social="medium" aria-label="Medium" href="https://medium.com/"> <img class="socials" src="images/medium-logo.svg" alt=""></a>
+                    <div class="tooltip">Medium</div>
+                </li>
+                <li class="socials-content">
+                    <a class="link" data-social="x" aria-label="x" href="https://x.com/?lang=en"><img class="socials" src="images/twitter-logo.svg" alt=""></a>
+                    <div class="tooltip">X</div>
+                </li>
+                <li class="socials-content">
+                    <a class="link" data-social="instagram" aria-label="Instagram" href="https://www.instagram.com/"><img class="socials" src="images/instagram-logo.svg" alt=""></a>
+                    <div class="tooltip">Instagram</div>
+                </li>
+        </div>
+        <div class="copy">
+            <p id="year"></p>
+            <p id="lastModifiedDate"></p>
+        </div>
     </footer>
 </body>
 </html>

@@ -123,9 +123,16 @@ nav.open {
     flex-shrink: 0;
 }
 
+h2  {
+    color: #000000;
+    margin-left: 2rem;
+
+}
+
 #hero h2{
     font-size: 4rem;
     margin-bottom: 2rem;
+    color: #1690d6;
 }
 
 #keynote-ticket {
@@ -145,15 +152,11 @@ section {
     padding: 2rem;
 }
 
-h2.title  {
-    color: #000000;
-    padding-left:2rem;
-}
-
 .intro-card-container{
     display: flex;
     flex-direction: column;
     gap: 1rem; 
+    margin-bottom: 3rem;
 }
 
 
@@ -197,7 +200,6 @@ div.intro-card table {
     margin: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%; 
     max-width: 300px; 
     background-color: #ffffff;
 }
@@ -205,15 +207,137 @@ div.intro-card table {
 #business-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.business-directory {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-grid-btn
+{
+    display: flex;
+    margin-bottom: 1rem;
+    align-self: center;
+    gap: 10px;
+}
+ 
+
+.list-grid-btn button {
+    display: flex; /* Allows image and text to sit next to each other */
+    align-items: center; /* Vertically aligns content */
+    gap: 0.5rem; /* Adds space between the image and text */
+    color: var(--color-text-white); /* Text color */
+    background-color: var(--color-secondary);
+    border: none; /* Removes default border */
+    border-radius: 8px; /* Optional rounded corners */
+    padding: 0.5rem 1rem; /* Space inside the button */
+    cursor: pointer; /* Changes cursor to pointer */
+    font-family: var(--font-body); /* Use your defined font */
+}
+
+#business-cards.list-view {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+
+#business-cards.list-view .business-card {
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+}
+
+#business-cards.list-view .business-card:nth-child(odd) {
+    background-color: #f9f9f9; /* Zebra striping */
+}
+
+#business-cards.list-view .business-card:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.business-card.list-item {
+    display: grid; 
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 0.25rem;
+    justify-items: center;
+    max-width: none;
+    border-radius: 0;
+    box-shadow: none;
+    align-items: center;
+}
+
+.business-card.list-item img {
+    display: none;
 }
 
 footer {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: start;
     padding: 20px;
     background-color: #dfd8c3;
     color: var(--color-text-black);
 }
+
+.footer-socials, .footer-socials ul {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-socials .socials-content {
+    margin: 0 10px;
+}
+
+.footer-socials .socials-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-bg);
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer-socials .socials-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+}
+
+.footer-socials .socials-content .link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #efefef;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-socials .socials-content .link:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.footer-socials .socials-content .link img {
+    width: 30px;
+    height: 30px;
+}
+
+
 
 #lastModifiedDate {
     font-size: var(--font-size-small);

@@ -59,6 +59,36 @@ function createBusinessCards(data) {
 
 fetchBusinessData();
 
+document.getElementById('list').addEventListener('click', () => {
+    const container = document.getElementById('business-cards');
+    container.classList.add('list-view');
+
+    const cards = container.querySelectorAll('.business-card');
+    cards.forEach(card => {
+        card.classList.add('list-item'); /
+        card.style.padding = ''; 
+    });
+});
+
+document.getElementById('grid').addEventListener('click', () => {
+    const container = document.getElementById('business-cards');
+    container.classList.remove('list-view');
+
+    const cards = container.querySelectorAll('.business-card');
+    cards.forEach(card => {
+        card.classList.remove('list-item'); 
+    });
+});
+
+
 // Update the footer with the current year and last modified date
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModifiedDate').textContent = `Last Modified: ${document.lastModified}`;
+const year = document.querySelector("#year");
+const today = new Date();
+
+const lastModifiedElement = document.getElementById('lastModifiedDate');
+const lastModifiedDate = new Date(document.lastModified);
+const formattedDate = lastModifiedDate.toLocaleString();
+
+year.innerHTML = `&copy <span>${today.getFullYear()}</span> Timbucktu Chamber of Commerce`;
+
+lastModifiedElement.textContent = 'Last Modified: ' + formattedDate;
