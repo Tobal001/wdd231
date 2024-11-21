@@ -168,6 +168,11 @@ div.intro-card {
     margin-bottom: 1rem;
 }
 
+.intro-card img {
+    height: 100px; 
+    width: auto; 
+}
+
 div.intro-card h3 {
     background-color: var(--color-primary);
     color: #ffffff;
