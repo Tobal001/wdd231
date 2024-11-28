@@ -228,7 +228,7 @@ div.intro-card table {
     border-radius: 3rem;
 }
 
-.business-spotlight {
+.business-spotlight, .business-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

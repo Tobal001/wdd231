@@ -22,9 +22,13 @@ async function apiFetch() {
 function displayData(data) {
     document.querySelector("#temperature").innerHTML = `<strong>${data.main.temp.toFixed(0)}</strong>&deg;C`;
     document.querySelector("#description").innerHTML = `${data.weather[0].description}`
+    const capDescription = description.charAt(0).toUpperCase() + description.slice(1);
     
+    document.querySelector('#description').innerHTML = capDescription
+
     const iconsrc = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
     let description = data.weather[0].description;
+
 
     document.querySelector('#icon').setAttribute('src', iconsrc)
     document.querySelector('#icon').setAttribute('alt', description);
