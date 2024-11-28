@@ -5,6 +5,52 @@ const weatherIcon = document.querySelector('#icon');
 
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat=49&lon=6.63&units=metric&appid=5307b09761b4d03a778816e0e7a4520b';
 
+const urlForecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=49&lon=6.63&cnt=24&units=metric&appid=5307b09761b4d03a778816e0e7a4520b';
+
+async function fetchForecast() {
+    try {
+        const response = await fetch(urlForecast);
+        if (response.ok) {
+            const forecastData = await response.json();
+            console.log(forecastData);
+            displayForecast(forecastData);
+        } else {
+            console.error('Error fetching data:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}
+
+function displayForecast(data) {
+    // Group forecasts by date
+    const forecastsByDate = {};
+    data.list.forEach(item => {
+        const date = item.dt_txt.split(' ')[0]; // Extract date (YYYY-MM-DD)
+        if (!forecastsByDate[date]) {
+            forecastsByDate[date] = [];
+        }
+        forecastsByDate[date].push(item);
+    });
+
+    // Get the next 3 days
+    const dates = Object.keys(forecastsByDate).slice(0, 3);
+
+    dates.forEach((date, index) => {
+        const dailyForecasts = forecastsByDate[date];
+
+        // Calculate average temperature
+        const avgTemp = dailyForecasts.reduce((sum, item) => sum + item.main.temp, 0) / dailyForecasts.length;
+
+        // Update the appropriate element
+        document.querySelector(`#day${index + 1}`).innerHTML = `<strong>${avgTemp.toFixed(0)}</strong>&deg;C`;
+    });
+}
+
+// Call the function to fetch and display data
+fetchForecast();
+
+
 //GRAB THE CURRENT WEATHER API
 async function apiFetch() {
     try {
@@ -22,6 +68,7 @@ async function apiFetch() {
 function displayData(data) {
     document.querySelector("#temperature").innerHTML = `<strong>${data.main.temp.toFixed(0)}</strong>&deg;C`;
     document.querySelector("#description").innerHTML = `${data.weather[0].description}`;
+
 
     const iconsrc = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
     let description = data.weather[0].description;
@@ -130,26 +177,25 @@ function createBusinessCard(business) {
 }
 
 //CREATING A GRID AND LIST  BUTTON 
-document.getElementById('list').addEventListener('click', () => {
-    const container = document.getElementById('business-cards');
-    container.classList.add('list-view');
+document.addEventListener('DOMContentLoaded', () => {
+    const listButton = document.getElementById('list');
+    if (listButton) {
+        listButton.addEventListener('click', () => {
+            const container = document.getElementById('business-cards');
+            if (!container) return;
 
-    const cards = container.querySelectorAll('.business-card');
-    cards.forEach(card => {
-        card.classList.add('list-item');
-        card.style.padding = ''; 
-    });
+            container.classList.add('list-view');
+
+            const cards = container.querySelectorAll('.business-card');
+            cards.forEach(card => {
+                card.classList.add('list-item');
+                card.style.removeProperty('padding');
+            });
+        });
+    }
 });
 
-document.getElementById('grid').addEventListener('click', () => {
-    const container = document.getElementById('business-cards');
-    container.classList.remove('list-view');
 
-    const cards = container.querySelectorAll('.business-card');
-    cards.forEach(card => {
-        card.classList.remove('list-item'); 
-    });
-});
 
 
 // Update the footer with the current year and last modified date
