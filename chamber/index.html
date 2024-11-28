@@ -23,6 +23,7 @@
     <link rel="icon" href="images/timbucktwo-logo.svg">
     <!-- Script -->
     <script src="scripts/scripts.js" defer></script>
+    <script src ="scripts/forcast.js" defer></script>
 </head>
 <body>
     <header>
@@ -32,8 +33,8 @@
     </header>
     <nav id="animateme">
         <ul class="menuLinks">
-            <li class="current-menu-item"><a href="#" title="Home">Home</a></li>
-            <li><a href="#" title="Directory">Directory</a></li>
+            <li class="current-menu-item"><a href="https://tobal001.github.io/wdd231/chamber/index.html" title="Home">Home</a></li>
+            <li><a href="https://tobal001.github.io/wdd231/chamber/directory.html#" title="Directory">Directory</a></li>
             <li><a href="#" title="Join">Join</a></li>
             <li><a href="#" title="Discover">Discover</a></li>
         </ul>
@@ -46,7 +47,7 @@
                     <source srcset="images/trust-large.webp" media="(min-width: 64rem)">
                     <img src="images/trust-mobile-tablet.webp" alt="handshake symbol for trust" width="240" height="206">
                 </picture>
-                <button id="keynote-ticket">Keynote Tickets</button>
+                <button id="keynote-ticket">Join Us</button>
             </div>
         </section>
         
@@ -59,71 +60,35 @@
 
                 </div>
             </div>
+            
             <div class="intro-card">
                 <h3>Current Weather</h3>
-                <div class="intro-content event">
-
-                    <img src="images/weather-icon-rain.webp" alt="raining icon">
-                    <table>
-                        <tr>
-                            <td id="temperature"><strong>25°C</strong></td>
-                        <tr>
-                            <td>Rain</td>
-                        </tr>
-                        <tr>
-                            <td>High: 30°C</td>
-                        </tr>
-                        <tr>
-                            <td>Low: 22°C</td>
-                        </tr>
-                        <tr>
-                            <td>Humidity: 30%</td>
-                        </tr>
-                        <tr>
-                            <td>Sundrise: 7:00am</td>
-                        </tr>
-                        <tr>
-                            <td>Sunset: 10:00pm</td>
-                        </tr>
-                        
-                    </table>
+                <div class="intro-content">
+                    <div class="weather-icon">
+                        <img id="icon" src="" alt="">
+                    </div>
+                    <div class="current-weather">
+                        <p><span id="temperature"></span></p>
+                        <p><span id="description"></span></p>
+                    </div>
                 </div>
+            </div>
             </div>
             <div class="intro-card">
                 <h3>Weather Forecast</h3>
-                <div class="intro-content">
-                    <table>
-                        <tr>
-                            <td >Today:</td>
-                            <td ><strong>25°C</strong></td>
-                        </tr>
-                        <tr>
-                            <td >Wednesday:</td>
-                            <td ><strong>20°C</strong></td>
-                        </tr>
-                        <tr>
-                            <td >Thursday:</td>
-                            <td ><strong>27°C</strong></td>
-                        </tr>
-                    </table>
+                <div class="forcast-content">
+                    <p>Today: <span id="day1"></span></p>
+                    <p>Wednsday: <span id="day2"></span></p>
+                    <p>Thursday: <span id="day3"></span></p>
+
                 </div>
             </div>
         </section>
-        <h2> Business Directory</h2>
-        <section class="business-directory">
-            <div class="list-grid-btn">
-                <button  id="list">
-                    <img src="images/list-icon.webp" alt="list icon">
-        
-                </button>
-                <button  id="grid">
-                    <img src="images/grid-icon.webp" alt="grid icon">
-                </button>
-            </div>
-            <div id="business-cards">
+    
+            
+            <div class="business-spotlight" id="spotlight-cards">
 
             </div>
-        </section>
        
     </main>
     <footer>

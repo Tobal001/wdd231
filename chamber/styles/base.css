@@ -191,6 +191,20 @@ div.intro-content {
     padding: 1rem;
     justify-content: center;
     gap: 1rem;
+    align-items: center;
+}
+
+.forcast-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
 }
 
 div.intro-card table {
@@ -214,7 +228,7 @@ div.intro-card table {
     border-radius: 3rem;
 }
 
-#business-cards {
+.business-spotlight {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
