@@ -32,6 +32,16 @@
         justify-content: center;
         align-self: end;
     }  
+    /* Form style */
+    .sign-up-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .thankyou-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media only screen and (min-width: 64rem) {
@@ -61,5 +71,5 @@
         flex-direction: row;
         justify-content: space-around;
         margin-bottom: 2rem;
-    }   
+    }  
 }

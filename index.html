@@ -29,7 +29,10 @@
     <header class="header">
         <div class="title">
             <img src="images/cristobal-h-profile-photo.png" alt="Photo of the Author" class="header-img" width="250" height="313">
-            <h1 class="header-title">Cristobal <span class="highlight">A.</span> Henriquez</h1>
+            <h1 class="header-title">
+                <span>C</span><span>r</span><span>i</span><span>s</span><span>t</span><span>o</span><span>b</span><span>a</span><span>l</span>&nbsp;
+                <span>H</span><span>e</span><span>n</span><span>r</span><span>i</span><span>q</span><span>u</span><span>e</span><span>z</span>
+              </h1>
             <!-- Hamburger Menu -->
         </div>
          <input class="menu-btn" type="checkbox" id="menu-btn" aria-label="Toggle Navigation Menu">
@@ -78,18 +81,10 @@
                     <button class="btn-wdd">WDD</button>
                 </div>  
                 <!-- Course Buttons Container -->
-                <div class="directory-options"></div>  
-                <div class="course-card">
-                    <div class="course-content">
-                        <span class="close">&times;</span>
-                        <h2 id="courseTitle"></h2>
-                        <p id="courseDescription"></p>
-                        <p><strong>Credits:</strong> <span id="courseCredits"></span></p>
-                        <p><strong>Technologies:</strong> <span id="courseTechnologies"></span></p>
-                    </div>
-                </div>
+                <div class="directory-options"></div>
+                <dialog id="course-modal"></dialog>  
             </div>      
-            </section>
+        </section>
     </main>
     <footer>
         <p id="year"></p>

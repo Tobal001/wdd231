@@ -3,29 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timbuktu Chamber of Commerce: Directory Page</title>
-    <meta name="description" content="Explore our members of local business in Timbucktwo">
+    <title>Thank You For Signing Up</title>
+    <meta name="description" content="Timbucktwo business commerce thank for signing up.">
     <meta name="author" content="Cristobal Henriquez">
-    <!--  Essential META Tags -->
-    <meta property="og:title" content="Timbuktu Chamber of Commerce: Directory">
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://tobal001.github.io/wdd231/chamber/images/trust-large.webp">
-    <meta property="og:url" content="https://tobal001.github.io/wdd231/chamber/directory.html">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="preload" href="styles/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="styles/large.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="styles/large.css">
-    </noscript>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&display=swap" rel="stylesheet">
     <link rel="icon" href="images/timbucktwo-logo.svg">
     <!-- Script -->
-
+    <script src ="scripts/scripts.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -35,29 +29,27 @@
     </header>
     <nav id="animateme">
         <ul class="menuLinks">
-            <li ><a href="https://tobal001.github.io/wdd231/chamber/index.html#" title="Home">Home</a></li>
-            <li class="current-menu-item"><a href="https://tobal001.github.io/wdd231/chamber/directory.html#" title="Directory">Directory</a></li>
-            <li><a href="" title="Join">Join</a></li>
-            <li><a href="" title="Discover">Discover</a></li>
+            <li class="current-menu-item"><a href="https://tobal001.github.io/wdd231/chamber/index.html" title="Home">Home</a></li>
+            <li><a href="https://tobal001.github.io/wdd231/chamber/directory.html#" title="Directory">Directory</a></li>
+            <li><a href="#" title="Join">Join</a></li>
+            <li><a href="#" title="Discover">Discover</a></li>
         </ul>
     </nav>
-    <main>
-        <section class="business-directory">
-            <h2> Business Directory</h2>
-            <div class="list-grid-btn">
-                <button  id="list" aria-label="List view">
-                    <img src="images/list-icon.webp" alt="List view icon">
-        
-                </button>
-                <button  id="grid" aria-label="Grid view">
-                    <img src="images/grid-icon.webp" alt="Grid view icon">
-                </button>
-            </div>
-            <div id="business-cards" class="business-cards">
-
-            </div>
+    <main class="thankyou-page">
+        <section class="thank-you-card">
+            <h2>Welcome to Our Community!</h2>
+            <p>We are thrilled to have you on board. By joining the Timbucktwo Chamber of Commerce, you are now part of a vibrant community of business leaders, innovators, and professionals dedicated to growth and success.</p>
+            <p>If you have any questions or need further assistance, don't hesitate to reach out to us. Together, we can achieve great things!</p>
         </section>
-       
+        <section class="form-results">
+            <h2>Your Submitted Information</h2>
+            <p><strong>First Name:</strong> <span id="first-name"></span></p>
+            <p><strong>Last Name:</strong> <span id="last-name"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Mobile Number:</strong> <span id="phone"></span></p>
+            <p><strong>Business Name:</strong> <span id="business-name"></span></p>
+            <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
+        </section>
     </main>
     <footer>
         <div>
@@ -90,3 +82,4 @@
     </footer>
 </body>
 </html>
+

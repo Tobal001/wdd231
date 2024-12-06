@@ -70,7 +70,7 @@ function displayData(data) {
     document.querySelector("#description").innerHTML = `${data.weather[0].description}`;
 
 
-    const iconsrc = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
     let description = data.weather[0].description;
 
 
@@ -153,6 +153,9 @@ function createBusinessCard(business) {
     const img = document.createElement('img');
     img.src = business.image_icon;
     img.alt = `${business.name} icon`;
+    img.width = 100; 
+    img.height = 100; 
+    img.loading = "lazy";
     card.appendChild(img);
 
     const name = document.createElement('h3');
@@ -209,4 +212,32 @@ const formattedDate = lastModifiedDate.toLocaleString();
 year.innerHTML = `&copy <span>${today.getFullYear()}</span> Timbucktu Chamber of Commerce`;
 
 lastModifiedElement.textContent = 'Last Modified: ' + formattedDate;
+
+// Load data on page load
+document.addEventListener("DOMContentLoaded", () => {
+    getMembershipLevelData();
+  
+    // Set timestamp in hidden field
+    const timestampField = document.getElementById("timestamp");
+    const form = document.querySelector("form");
+  
+    // Set the current date and time when the form is loaded
+    const now = new Date();
+    timestampField.value = now.toISOString();
+  
+    // Ensure that the timestamp updates right before submission
+    form.addEventListener("submit", () => {
+      timestampField.value = new Date().toISOString();
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById("first-name").textContent = urlParams.get("first") || "N/A";
+    document.getElementById("last-name").textContent = urlParams.get("last") || "N/A";
+    document.getElementById("email").textContent = urlParams.get("email") || "N/A";
+    document.getElementById("phone").textContent = urlParams.get("phone") || "N/A";
+    document.getElementById("business-name").textContent = urlParams.get("business-name") || "N/A";
+    document.getElementById("timestamp").textContent = urlParams.get("timestamp") || "N/A";
+});
 

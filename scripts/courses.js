@@ -64,12 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const coursesContainer = document.querySelector('.directory-options');
-    const courseCard = document.querySelector('.course-card');
-    const closeBtn = document.querySelector('.close');
-    const courseTitle = document.getElementById('courseTitle');
-    const courseDescription = document.getElementById('courseDescription');
-    const courseCredits = document.getElementById('courseCredits');
-    const courseTechnologies = document.getElementById('courseTechnologies');
 
     // Function to render course buttons
     function renderCourses(filteredCourses) {
@@ -86,23 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             button.textContent = `${course.subject} ${course.number}`;
-            button.addEventListener('click', () => showCourseDetails(course));
+            button.addEventListener('click', () => displayCourseDetails(course));
             coursesContainer.appendChild(button);
         });
-    }
-
-    // Function to show course details in the course card
-    function showCourseDetails(course) {
-        courseTitle.textContent = `${course.subject} ${course.number}: ${course.title}`;
-        courseDescription.textContent = course.description;
-        courseCredits.textContent = course.credits;
-        courseTechnologies.textContent = course.technology.join(', ');
-        courseCard.style.display = 'block';
-    }
-
-    // Function to close the course card
-    function closeModal() {
-        courseCard.style.display = 'none';
     }
 
     // Initial render with all courses
@@ -123,13 +103,77 @@ document.addEventListener("DOMContentLoaded", function () {
         renderCourses(filtered);
     });
 
-    // Event listener to close the modal
-    closeBtn.addEventListener('click', closeModal);
+    //Render Course Modal
+    const courseModal = document.querySelector('#course-modal')
 
-    // Close modal when clicking outside of the modal content
-    window.addEventListener('click', (event) => {
-        if (event.target === courseCard) {
-            closeModal();
-        }
-    });
+    function displayCourseDetails(course) {
+        const closeModal = document.querySelector('.btn-close');
+        courseModal.innerHTML = '';
+       
+        // close button
+        const closeButton = document.createElement('button');
+        closeButton.type = 'button';
+        closeButton.className = 'btn-close';
+        closeButton.id = 'closeModal';
+        closeButton.ariaLabel = 'Close';
+        closeButton.innerHTML = '&times;';
+        courseModal.appendChild(closeButton);
+        
+        const courseDetails = document.createElement("div");
+        courseDetails.className = 'course-details';
+        courseModal.appendChild(courseDetails);
+        courseDetails.innerHTML = `
+            <h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+            <p><strong>Credits</strong>: ${course.credits}</p>
+            <p><strong>Certificate</strong>: ${course.certificate}</p>
+            <p>${course.description}</p>
+            <p><strong>Technologies</strong>: ${course.technology.join(',')}</p>
+        `;
+        
+        courseModal.appendChild(courseDetails);
+
+        courseModal.showModal();
+
+
+        closeButton.addEventListener("click", () => {
+            courseModal.close();
+        });
+        
+    };
+    
+
+
+
+
+    // const courseCard = document.querySelector('#modal');
+    // const closeBtn = document.querySelector('.close');
+    // const courseTitle = document.getElementById('courseTitle');
+    // const courseDescription = document.getElementById('courseDescription');
+    // const courseCredits = document.getElementById('courseCredits');
+    // const courseTechnologies = document.getElementById('courseTechnologies');
+
+    // Function to show course details in the course card
+    // function showCourseDetails(course) {
+    //     courseTitle.textContent = `${course.subject} ${course.number}: ${course.title}`;
+    //     courseDescription.textContent = course.description;
+    //     courseCredits.textContent = course.credits;
+    //     courseTechnologies.textContent = course.technology.join(', ');
+    //     courseCard.style.display = 'block';
+    // }
+
+    // // Function to close the course card
+    // function closeModal() {
+    //     courseCard.style.display = 'none';
+    // }
+
+    // // Event listener to close the modal
+    // closeBtn.addEventListener('click', closeModal);
+
+    // // Close modal when clicking outside of the modal content
+    // window.addEventListener('click', (event) => {
+    //     if (event.target === courseCard) {
+    //         closeModal();
+    //     }
+    // });
 });

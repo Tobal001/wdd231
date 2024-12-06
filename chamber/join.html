@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbuktu Chamber of Commerce: Commerce Sign up</title>
+    <meta name="description" content="Timbucktwo business commerce sign up page.">
+    <meta name="author" content="Cristobal Henriquez">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/timbucktwo-logo.svg">
+    <!-- Script -->
+    <script src ="scripts/scripts.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/timbucktwo-logo.svg" width= 125 height= 32 alt="logo" >
+        <h1>Chamber of Commerce</h1>
+        <button id="myButton" title="navigation button"></button>
+    </header>
+    <nav id="animateme">
+        <ul class="menuLinks">
+            <li class="current-menu-item"><a href="https://tobal001.github.io/wdd231/chamber/index.html" title="Home">Home</a></li>
+            <li><a href="https://tobal001.github.io/wdd231/chamber/directory.html#" title="Directory">Directory</a></li>
+            <li><a href="#" title="Join">Join</a></li>
+            <li><a href="#" title="Discover">Discover</a></li>
+        </ul>
+    </nav>
+    <main class="sign-up-page">
+        <form method="GET" action="thankyou.html" class="designOne">
+            <h2 class="join-title">Commerce Sign-up</h2>
+            <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+            <label>Organizational Title <input type="text" name="organizational-title" autocomplete="organization-title" title="Your Organization Title"></label>
+            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com" title="Your Email" autocomplete="email"></label>
+            <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234"></label>
+            <label>Business Name <input type="text" name="business-name" required autocomplete="business-name" title="Your Business Name"></label>
+
+            <fieldset>
+                <legend>Membership Level</legend>
+                <label><input type="radio" name="membership" value="np-membership"> NP Profit</label>
+                <label><input type="radio" name="membership" value="bronze-membership" checked> Bronze Membership</label>
+                <label><input type="radio" name="membership" value="silver-membership"> Silver Membership</label>
+                <label><input type="radio" name="membership" value="gold-membership"> Gold Membership</label>
+            </fieldset>
+            
+            <label>
+                Business Description:
+                <textarea class="business-description" name="business-description" title="You business description" rows="5" cols="30" placeholder="Write your description here..."></textarea>
+            </label>
+
+            <input type="hidden" id="timestamp" name="timestamp">
+
+            <input class="submit-btn" type="submit" value="Join the Commerce">
+        </form>
+        <div class="membership-cards">
+            <h2 class="join-title">Membership Levels</h2>
+            <div class="membership-card" id="np-membership">
+                <h3>Non Profit Membership Level</h3>
+                <button id="np-member" class="btn">Learn More</button>
+            </div>
+            <div class="membership-card" id="bronze-membership">
+                <h3>Bronze Membership Level</h3>
+                <button id="bronze-member" class="btn">Learn More</button>
+            </div>
+            <div class="membership-card" id="silver-membership">
+                <h3>Silver Membership Level</h3>
+                <button id="silver-member" class="btn">Learn More</button>
+            </div>
+            <div class="membership-card" id="gold-membership">
+                <h3>Gold Membership Level</h3>
+                <button id="gold-member" class="btn">Learn More</button>
+            </div>
+            
+        </div>
+        <dialog id="membership-level-modal">
+            <div class="modal-content">
+              <h2 id="modal-title">Membership Title</h2>
+              <p id="modal-description">Membership description goes here.</p>
+              <ul id="modal-features"></ul>
+              <p><strong>Pricing:</strong> <span id="modal-pricing"></span></p>
+              <p><strong>Target Audience:</strong> <span id="modal-audience"></span></p>
+              <button id="close-modal" class="btn-close">Close</button>
+            </div>
+        </dialog>
+    </main>
+    <footer>
+        <div>
+            <strong>Timbucktwo Chamber of Commerce</strong>
+            <p>1251 Main Street</p>
+            <p>Rivertown, Alberta Canada</p>
+            <p>info@tmbktu.org</p>
+            <p>(546) 778-6000</p>
+        </div>
+        <div class="footer-socials">
+            <ul>
+                <li class="socials-content">
+                    <a class="link" data-social="medium" aria-label="Medium" href="https://medium.com/"> <img class="socials" src="images/medium-logo.svg" alt=""></a>
+                    <div class="tooltip">Medium</div>
+                </li>
+                <li class="socials-content">
+                    <a class="link" data-social="x" aria-label="x" href="https://x.com/?lang=en"><img class="socials" src="images/twitter-logo.svg" alt=""></a>
+                    <div class="tooltip">X</div>
+                </li>
+                <li class="socials-content">
+                    <a class="link" data-social="instagram" aria-label="Instagram" href="https://www.instagram.com/"><img class="socials" src="images/instagram-logo.svg" alt=""></a>
+                    <div class="tooltip">Instagram</div>
+                </li>
+            </ul>
+        </div>
+        <div class="copy">
+            <p id="year"></p>
+            <p id="lastModifiedDate"></p>
+        </div>
+    </footer>
+</body>
+</html>
+
