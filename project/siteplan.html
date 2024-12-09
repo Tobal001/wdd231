@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TobalCodes</title>
+    <meta name="description" content="Site plan for TobalCodes, a blog that documents Cristobal's programing journey.">
+    <meta name="author" content="Cristobal Henriquez">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="logo">TobalCodes</h1>
+    </header>
+    <main>
+        <section id="banner">
+            <p>
+                I've chosen the domain name TobalCodes because it reflects both a personal and thematic connection. "Tobal" comes from my family nickname, derived from the latter half of my name, Cristobal, giving the site a personal touch. "Codes" narrows the focus of the site, clearly indicating that it revolves around programming. Together, the name represents my personal journey in programming and learning.
+            </p>
+            <small>Proposed Domain Name: TobalCodes.ca <span id="available">Available</span></small>
+        </section>
+        <section class="card">
+            <h2>Purpose</h2>
+            <p>
+                The site serves a <strong>dual purpose</strong>: a place to document and organize the things I’m learning on my programming journey 
+                and a platform to share those insights with others who are also learning.
+            </p>
+            <div class="components">
+                <h3>Components</h3>
+                <ol>
+                    <li>
+                        <h4>Programming Lingo (Glossary)</h4>
+                        <p>
+                            As a first-year software development student, I’ve been bombarded with terminology that hasn’t quite stuck yet—especially since 
+                            some concepts seem to have multiple names! This section will:
+                        </p>
+                        <ul>
+                            <li>Provide clear definitions of terms.</li>
+                            <li>Offer a searchable resource to quickly find information.</li>
+                            <li>Help make sense of programming jargon.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Fundamental Programming Concepts</h4>
+                        <p>
+                            This section will focus on core concepts, featuring:
+                        </p>
+                        <ul>
+                            <li>Simple code examples to illustrate each concept.</li>
+                            <li>
+                            A feature to toggle between different programming languages (Python, C#, JavaScript), 
+                            highlighting both subtle differences and similarities in syntax.
+                            </li>
+                            <li>
+                            Real-world examples or projects demonstrating these concepts to keep them grounded and practical.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section class="scenario-card ">
+            <h2>Target audience & Scenarios</h2>
+            <div class="scenario-card ">
+                <div id="scenario-content"></div>
+                <button id="next-button" onclick="showNextScenario()">Next</button>
+            </div>
+        </section>
+        <div id="styles">
+            <section class="card">
+                <h2>Color Shcema</h2>
+                <div>
+                    <h3>
+                        Primary Color: Dark Blue(#0A192F <span class="color-box" style="background-color: #0A192F;"></span>)
+                    </h3>
+                    <p>Used for headers, navigation bars, and other key elements to provide a professional and modern feel</p>
+                </div>
+                <div>
+                    <h3>
+                        Secondary Color: Bright Cyan (#4ECDC4 <span class="color-box" style="background-color: #4ECDC4;"></span>)
+                    </h3>
+                    <p>Vibrant accent color for links, buttons, and highlights to draw attention to interactive elements.</p>
+                </div>
+                <div>
+                    <h3>
+                        Background Color: Off-White (#F9F9F9 <span class="color-box" style="background-color: #F9F9F9;"></span>)
+                    </h3>
+                    <p>Clean and neutral, ideal for main content areas to enhance readability.</p>
+                </div>
+                <div>
+                    <h3>
+                        Accent Color 1: Light Gray (#F4F4F4 <span class="color-box" style="background-color: #F4F4F4;"></span>)
+                    </h3> 
+                    <p>Used for card backgrounds, subtle dividers, and borders to create depth without overpowering the design.</p>   
+                </div>
+                <div>
+                    <h3>
+                        Accent Color 2: Slate Gray (#1E293B <span class="color-box" style="background-color: #1E293B;"></span>)
+                    </h3> 
+                    <p>A darker gray for secondary text, footers, or less prominent sections to add contrast and hierarchy.</p>   
+                </div>
+                <div>
+                    <h3>
+                        Interactive Accent: Warm Orange (#FF6F61 <span class="color-box" style="background-color: #FF6F61;"></span>)
+                    </h3> 
+                    <p>Used for hover effects on buttons, links, and other interactive elements to provide a noticeable and energetic contrast.</p>   
+                </div>
+            </section>
+            <section class="card">
+                <h2>Typography</h2>
+                <h3>Nunito, sans-serif</h3>
+                <p>Headers are set at weight: 700 and body text set at standard weight: 400</p>
+            </section>
+        </div> 
+        <section id="wireframe" >
+            <h2>Wireframe</h2>
+            <div class="wireframe">
+                <img src="images/home-large.jpeg" alt="wireframe for Welcome page, large screen">
+                <img class="moble-wireframe" src="images/home-mobile.jpeg" alt="wireframe for Welcome page, mobile screen">
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
