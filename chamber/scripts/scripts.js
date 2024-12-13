@@ -81,7 +81,7 @@ function displayData(data) {
 
 apiFetch();
 
-
+//HAMBURGER MENU
 const hamburgerElement = document.querySelector('#myButton');
 const navElement = document.querySelector('#animateme');
 
@@ -91,7 +91,7 @@ hamburgerElement.addEventListener('click', () => {
 });
 
 
-// Fetch data and process it
+//BUSINESS CARD DATA FETCH
 function fetchBusinessData() {
     fetch('data/members.json')
         .then(response => {
@@ -117,6 +117,7 @@ function fetchBusinessData() {
 // Call the fetch function
 fetchBusinessData();
 
+//RANDOMIZE THE GOLD BUSINESS MEMBERS 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -125,6 +126,7 @@ function shuffleArray(array) {
     return array;
 }
 
+//
 function displayAllBusinesses(data) {
     const businessCards = document.getElementById('business-cards');
     data.forEach(business => {
@@ -182,6 +184,7 @@ function createBusinessCard(business) {
 //CREATING A GRID AND LIST  BUTTON 
 document.addEventListener('DOMContentLoaded', () => {
     const listButton = document.getElementById('list');
+    const gridButton = document.getElementById('grid');
     if (listButton) {
         listButton.addEventListener('click', () => {
             const container = document.getElementById('business-cards');
@@ -195,8 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.style.removeProperty('padding');
             });
         });
-    }
-});
+};
 
 
 
@@ -213,4 +215,4 @@ year.innerHTML = `&copy <span>${today.getFullYear()}</span> Timbucktu Chamber of
 
 lastModifiedElement.textContent = 'Last Modified: ' + formattedDate;
 
-
+});

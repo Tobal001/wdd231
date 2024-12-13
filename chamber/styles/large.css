@@ -42,6 +42,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    /* DISCOVERY PAGE*/
+
+    .place-card {
+        grid-template-areas: 
+            "image header"
+            "image text-content";
+    }
+
+    .place-card img {
+        width: 300px;
+    }
+    
 }
 
 @media only screen and (min-width: 64rem) {
@@ -72,4 +85,13 @@
         justify-content: space-around;
         margin-bottom: 2rem;
     }  
+
+    div.wrapper {
+        display: grid;
+        grid-template-columns: 4fr;
+        grid-template-areas: 
+            "sidebar content";
+    }
+    
+
 }

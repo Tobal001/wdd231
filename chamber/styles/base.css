@@ -45,6 +45,10 @@ header {
     align-items: end;
 }
 
+body {
+    font-family: var(--font-body) ;
+}
+
 nav {
     background-color: #ffffff;
 }
@@ -59,7 +63,8 @@ nav {
     border: none;
     color: var(--color-text-main);
     cursor: pointer;
-    width: 100%;
+    width: 40px;
+    height: 40px;
     text-align: right;
     padding: .25rem 2vw;
 
@@ -68,8 +73,7 @@ nav {
 ul.menuLinks li a {
     display: block;
     padding: .75rem 2vw;
-    font-family: var(--font-body);
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
     color: var(--color-text-main);
 }
@@ -86,6 +90,7 @@ ul.menuLinks {
     content: "x"
 }
 
+
 nav { 
     display: grid;
     grid-template-rows: 0fr;
@@ -97,6 +102,7 @@ nav ul {overflow: hidden;}
 nav.open {
     grid-template-rows: 1fr;
 }
+
 
 #hero {
     display: flex;
@@ -206,8 +212,6 @@ div.intro-content {
 div.intro-card table {
     font-size: large;
 }
-
-
 
 .business-card {
     border: 1px solid #ddd;
@@ -384,100 +388,102 @@ footer {
 form {
     margin: 1rem;
     gap: 10px;
-  
-    label{
-      display: flex;
-      flex-direction: column;
-      font-size: 1rem;
-      color: rgb(0, 0, 0);
-      padding-top: .2rem;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    padding-top: .2rem;
+}
+
+::placeholder {
+    font-family: var(--font-body);
+}
+
+fieldset {
+    border-radius: 8px;
+    max-width: 400px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+fieldset label {
+    display: block;
+    border: none;
+}
+
+.business-description {
+    margin: 0.1rem 0 1rem 0;
+    padding: 0.3rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    border-left-width: 5px;
+    border-left-color: #555;
+    font-size: 1rem;
+    color: #3D405B;
+    width: 100%;
+    max-width: 400px;
     }
 
-    ::placeholder {
-        font-family: var(--font-body);
-    }
 
-    fieldset {
-        border-radius: 8px;
-        max-width: 400px;
-        padding: 1rem;
-        margin: 1rem 0;
-    }
+h3 {
+    font-size: .9rem;
+    color: var(--color-primary);
+    margin: 1.5rem 0 .2rem 0;
+    border-bottom: 1px solid #eee;
+}
 
-    fieldset label {
-        display: block;
-        border: none;
-    }
+input[type=text],
+input[type=tel],
+input[type=date],
+input[type=email],
+select {
+    display: block;
+    margin: .1rem 0 1rem 0 ;
+    padding: .3rem;
+    border: 1.5px solid #ecedec;
+    border-radius: 10px;
+    border-left-width: 5px;
+    height: 40px;
+    border-left-color:#555;
+    font-size: 1rem;
+    color: #3D405B;
+    max-width: 400px;
+    transition: 0.2s ease-in-out;
+}
 
-    .business-description {
-        margin: 0.1rem 0 1rem 0;
-        padding: 0.3rem;
-        border: 1px solid #999;
-        border-radius: 4px;
-        border-left-width: 5px;
-        border-left-color: #555;
-        font-size: 1rem;
-        color: #3D405B;
-        width: 100%;
-        max-width: 400px;
-      }
+input:required {border-left-color: #d70000;}
+input:focus {border-left-color: black; outline:none;}
+input:required:valid{border-left-color: green;}
+
+input[type=submit] {
+    border: none;
+    text-align: center;
+    background-color: #3D405B;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    -webkit-appearance: none;
+    appearance: none;
+    max-width: 400px;
+    width: 100%;
+}
 
 
-    h3 {
-      font-size: .9rem;
-      color: #E07A5F;
-      margin: 1.5rem 0 .2rem 0;
-      border-bottom: 1px solid #eee;
-    }
-  
-    input[type=text],
-    input[type=tel],
-    input[type=date],
-    input[type=email],
-    select {
-      display: block;
-      margin: .1rem 0 1rem 0 ;
-      padding: .3rem;
-      border: 1.5px soild #ecedec;
-      border-radius: 10px;
-      border-left-width: 5px;
-      height: 40px;
-      border-left-color:#555;
-      font-size: 1rem;
-      color: #3D405B;
-      max-width: 400px;
-      transition: 0.2s ease-in-out;
-    }
-  
-    input:required {border-left-color: #d70000;}
-    input:focus {border-left-color: black; outline:none;}
-    input:required:valid{border-left-color: green;}
-  
-    input[type=submit] {
-      border: none;
-      text-align: center;
-      background-color: #3D405B;
-      color: white;
-      border-radius: 1rem;
-      padding: .75rem 1.5rem;
-      margin: 1rem 0;
-      font-size: 1.2rem;
-      -webkit-appearance: none;
-      appearance: none;
-      max-width: 400px;
-      width: 100%;
-    }
-  }
-  input:-webkit-autofill{
-    -webkit-text-fill-color: #3D405B;
-  }
-  
-  #results {
-    background-color: #F4F1DE;
-    padding: 0 1rem;
-    border: 1px solid #E07A5F;
-    border-radius: 6px;
-  }
+input:-webkit-autofill{
+-webkit-text-fill-color: #3D405B;
+}
+
+#results {
+background-color: #F4F1DE;
+padding: 0 1rem;
+border: 1px solid #E07A5F;
+border-radius: 6px;
+}
 
 .membership-cards {
     display: flex;
@@ -564,4 +570,206 @@ dialog {
     display: flex;
     flex-direction: column;
 }
+
+/*DISCOVER.HTML MAIN CONTENT*/
+
+section.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:1rem;
+}
+
+aside.sidebar {
+    grid-area: sidebar;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+div.wrapper {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-areas: 
+        "sidebar"        
+        "content";
+}
+
+div.place-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    background-color: #ffffff;
+    display: grid;
+}
+
+.place-card h3 {
+    grid-area: header;
+    padding: 1rem;
+}
+
+.place-text {
+    display: flex;
+    flex-direction: column;
+    grid-area: text-content;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.place-card {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "image"
+        "text-content";
+}
+
+.place-img {
+    grid-area: image;
+    align-self: center;
+}
+
+.place-card img {
+    width: 100%;
+}
+
+/* DESCOVER.HTML, SIDEBAR CALANDER */
+.events-calendar {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width:100%;
+    max-width: 600px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.events-calendar h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.events-calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.events-calendar th, .events-calendar td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.events-calendar th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.events-calendar tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* WELCOME VISITOR CARD */
+#visitMessage {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width:100%;
+    max-width: 600px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* DESCOVER, TOP 5 CARD */
+
+.poll-results {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width:100%;
+    min-height: 200px;
+    max-width: 600px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poll-results h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.poll-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.poll-results li {
+    margin-bottom: 15px;
+}
+
+.poll-label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.poll-bar-container {
+    background-color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+    width: 100%;
+}
+
+.poll-bar {
+    background-color: #4caf50;
+    height: 100%;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 20px;
+    color: black;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+/* DISCOVERY.HTML, DEMOGRAPHICS */
+.demographics-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.demographics-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.demographics-card p, .demographics-card ul {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.demographics-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.demographics-card strong {
+    font-weight: bold;
+}
+
   

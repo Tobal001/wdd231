@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbuktu Chamber of Commerce: Home Page</title>
+    <meta name="description" content="a resource hub for businesses in the city of Timbuktu. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.">
+    <meta name="author" content="Cristobal Henriquez">
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Timbuktu Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tobal001.github.io/wdd231/chamber/images/trust-large.webp">
+    <meta property="og:url" content="https://tobal001.github.io/wdd231/chamber/directory.html">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/timbucktwo-logo.svg">
+    <!-- Script -->
+    <script src="scripts/descover.js" type="module"></script>
+    <script src ="scripts/scripts.js" defer></script>
+    
+    
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/timbucktwo-logo.svg" width= 125 height= 32 alt="logo" >
+        <h1>Chamber of Commerce</h1>
+        <button id="myButton" title="navigation button"></button>
+    </header>
+    <nav id="animateme">
+        <ul class="menuLinks">
+            <li><a href="https://tobal001.github.io/wdd231/chamber/index.html" title="Home">Home</a></li>
+            <li><a href="https://tobal001.github.io/wdd231/chamber/directory.html#" title="Directory">Directory</a></li>
+            <li><a href="https://tobal001.github.io/wdd231/chamber/join.html" title="Join">Join</a></li>
+            <li class="current-menu-item"><a href="#" title="Discover">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div id="visitMessage"></div>
+            <div class="events-calendar">
+                <h2>Upcoming Events</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Event</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody id="events-list">
+                        <!-- Events will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="poll-results">
+                <h2>Top 5 Things to Do in Edmonton</h2>
+                <ul>
+                    <li>
+                        <span class="poll-label">West Edmonton Mall (450 votes)</span>
+                        <div class="poll-bar-container">
+                            <div class="poll-bar" style="width: 35%;">35%</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="poll-label">Fort Edmonton Park (380 votes)</span>
+                        <div class="poll-bar-container">
+                            <div class="poll-bar" style="width: 30%;">30%</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="poll-label">Muttart Conservatory (320 votes)</span>
+                        <div class="poll-bar-container">
+                            <div class="poll-bar" style="width: 25%;">25%</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="poll-label">TELUS World of Science (300 votes)</span>
+                        <div class="poll-bar-container">
+                            <div class="poll-bar" style="width: 23%;">23%</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="poll-label">Edmonton Valley Zoo (250 votes)</span>
+                        <div class="poll-bar-container">
+                            <div class="poll-bar" style="width: 20%;">20%</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="demographics-card">
+                <h2>Edmonton Demographics</h2>
+                <p><strong>Population:</strong> 1,010,899 (2024 Estimate)</p>
+                <p><strong>Median Age:</strong> 36.8 years</p>
+                <p><strong>Gender Breakdown:</strong> Male 49.5% | Female 50.5%</p>
+                <p><strong>Ethnic Composition:</strong></p>
+                <ul>
+                    <li>European Descent: 60.78%</li>
+                    <li>South Asian: 8.82%</li>
+                    <li>Southeast Asian: 7.26%</li>
+                    <li>Indigenous: 6.27%</li>
+                </ul>
+                <p><strong>Median Household Income:</strong> $44,000 CAD</p>
+                <p><strong>Key Industries:</strong> Energy, Technology, Healthcare, Retail</p>
+                <p><strong>Languages Spoken:</strong> English (Predominant), French, Others</p>
+                <p><strong>Annual Population Growth:</strong> 5.13%</p>
+            </div>
+        </aside>
+        <section id="content" class="content"></section>
+    </div>
+    </main>
+    <footer>
+        <div>
+            <strong>Timbucktwo Chamber of Commerce</strong>
+            <p>1251 Main Street</p>
+            <p>Rivertown, Alberta Canada</p>
+            <p>info@tmbktu.org</p>
+            <p>(546) 778-6000</p>
+        </div>
+        <div class="footer-socials">
+            <ul>
+                <li class="socials-content">
+                    <a class="link" data-social="medium" aria-label="Medium" href="https://medium.com/"> <img class="socials" src="images/medium-logo.svg" alt=""></a>
+                    <div class="tooltip">Medium</div>
+                </li>
+                <li class="socials-content">
+                    <a class="link" data-social="x" aria-label="x" href="https://x.com/?lang=en"><img class="socials" src="images/twitter-logo.svg" alt=""></a>
+                    <div class="tooltip">X</div>
+                </li>
+                <li class="socials-content">
+                    <a class="link" data-social="instagram" aria-label="Instagram" href="https://www.instagram.com/"><img class="socials" src="images/instagram-logo.svg" alt=""></a>
+                    <div class="tooltip">Instagram</div>
+                </li>
+            </ul>
+        </div>
+        <div class="copy">
+            <p id="year"></p>
+            <p id="lastModifiedDate"></p>
+        </div>
+    </footer>
+</body>
+</html>
+
