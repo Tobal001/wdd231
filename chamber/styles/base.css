@@ -505,10 +505,10 @@ border-radius: 6px;
 }
 
 .membership-card {
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Slightly below its final position */
+    opacity: 0; 
+    transform: translateY(20px); 
     animation: fadeInUp 0.8s ease forwards;
-    animation-delay: var(--delay, 0s); /* Use CSS variable for staggered delays */
+    animation-delay: var(--delay, 0s);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
