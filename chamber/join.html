@@ -40,11 +40,11 @@
         </ul>
     </nav>
     <main class="sign-up-page">
-        <form method="GET" action="thankyou.html" class="designOne">
+        <form method="GET" action="thankyou.html" class="designOne" id="signUpForm">
             <h2 class="join-title">Commerce Sign-up</h2>
             <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
             <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-            <label>Organizational Title <input type="text" name="organizational-title" autocomplete="organization-title" title="Your Organization Title"></label>
+            <label>Organizational Title <input type="text" name="organizational-title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Your Organization Title"></label>
             <label>Email <input type="email" name="email" required placeholder="john89@gmail.com" title="Your Email" autocomplete="email"></label>
             <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234"></label>
             <label>Business Name <input type="text" name="business" required autocomplete="organization" title="Your Business Name"></label>
@@ -58,7 +58,7 @@
             
             <label>
                 Business Description:
-                <textarea class="business-description" name="business-description" title="You business description" rows="5" cols="30" placeholder="Write your description here..."></textarea>
+                <textarea class="business-description" name="description" title="You business description" rows="5" cols="30" placeholder="Write your description here..."></textarea>
             </label>
 
             <input type="hidden" id="timestamp" name="timestamp">

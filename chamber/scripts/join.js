@@ -118,3 +118,45 @@ function attachModalEvents(membershipLevels) {
 document.addEventListener("DOMContentLoaded", () => {
   getMembershipLevelData();
 });
+
+//timestamp 
+document.addEventListener("DOMContentLoaded", function () {
+  const timestampField = document.getElementById("timestamp");
+  const currentDate = new Date().toISOString(); // ISO format: YYYY-MM-DDTHH:mm:ss.sssZ
+  timestampField.value = currentDate;
+});
+
+// Grab the intire URL for this page including the attached GET values
+const currentUrl = window.location.href;
+console.log(currentUrl);
+
+//Divide the url into two halves
+const everything = currentUrl.split('?');
+console.log(everything);// You do not need the console logs.
+
+//Grab just the second half & break the form name value pairs into an array
+let formData = everything[1].split('&');
+console.log(formData);
+
+function show(cup) {
+  console.log(cup)
+  formData.forEach((element) => {
+      console.log(element)
+      if (element.startsWith(cup)){
+          result=element.split('=')[1].replace("%40", "@");
+      }
+  })
+
+  return(result);
+}
+
+const showInfo = document.querySelector('#results');
+showInfo.innerHTML = `
+    <h2>Your Submitted Information</h2>
+    <p><strong>First Name:</strong> ${show("first")}</p>
+    <p><strong>Last Name:</strong> ${show("last")}</p>
+    <p><strong>Email:</strong> ${show("email")}</p>
+    <p><strong>Mobile Number:</strong> ${show("phone")}</p>
+    <p><strong>Business Name:</strong>${show("business")}></p>
+    <p><strong>Timestamp:</strong> ${show("timestamp")}</p>
+    `

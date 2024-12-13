@@ -493,7 +493,22 @@ border-radius: 6px;
     
 }
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .membership-card {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slightly below its final position */
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: var(--delay, 0s); /* Use CSS variable for staggered delays */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
@@ -501,8 +516,8 @@ border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #ffffff;
-    height: 150px;
 }
+
 
 .membership-card h3 {
     margin-bottom: 1rem;
